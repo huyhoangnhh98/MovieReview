@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.movie.MovieFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:fontFamily="@font/asap_bold"
+                        android:text="@string/nowplaying"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header1_movies" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/top_now_playing"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header2_movies" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/now_playing_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/smallmargin"
+                        android:clipToPadding="false"
+                        android:paddingStart="@dimen/margin"
+                        android:paddingEnd="@dimen/margin"
+                        android:scrollbars="horizontal" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:fontFamily="@font/asap_bold"
+                        android:text="@string/popular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header1_movies" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/most_popular_movies"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header2_movies" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/popular_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/smallmargin"
+                        android:clipToPadding="false"
+                        android:paddingStart="@dimen/margin"
+                        android:paddingEnd="@dimen/margin"
+                        android:scrollbars="horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:fontFamily="@font/asap_bold"
+                        android:text="@string/top_rated"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header1_movies" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/highest_rated_movies"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header2_movies" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/toprate_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/smallmargin"
+                        android:clipToPadding="false"
+                        android:paddingStart="@dimen/margin"
+                        android:paddingEnd="@dimen/margin" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:fontFamily="@font/asap_bold"
+                        android:text="@string/upcoming"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header1_movies" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/stay_updated"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/header2_movies" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/upcoming_movies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/smallmargin"
+                        android:clipToPadding="false"
+                        android:paddingStart="@dimen/margin"
+                        android:paddingEnd="@dimen/margin"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+</layout>

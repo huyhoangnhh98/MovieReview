@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_bottom"
+    app:startDestination="@id/movieFragment">
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.moviereview.ui.movie.MovieFragment"
+        android:label="Movies"
+        tools:layout="@layout/movie_fragment" >
+        <action
+            android:id="@+id/action_movieFragment_to_fragmentmovieDetails"
+            app:destination="@id/fragmentmovieDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/celebsFragment"
+        android:name="com.example.moviereview.ui.celebs.CelebsFragment"
+        android:label="Celebs"
+        tools:layout="@layout/celebs_fragment" />
+    <fragment
+        android:id="@+id/tvFragment"
+        android:name="com.example.moviereview.ui.tv.TVFragment"
+        android:label="TV"
+        tools:layout="@layout/tv_fragment" />
+    <fragment
+        android:id="@+id/fragmentmovieDetails"
+        android:name="com.example.moviereview.ui.movie.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="movie"
+            app:argType="com.oxcoding.moviemvvm.data.vo.MovieDetails" />
+    </fragment>
+</navigation>
